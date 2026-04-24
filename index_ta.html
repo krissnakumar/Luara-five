@@ -15,9 +15,9 @@
   <div id="app">
     <!-- Language Switcher -->
     <div id="lang-switcher" class="glass-card">
-      <a href="index.html">🇬🇧</a>
-      <a href="index_pt.html">🇧🇷</a>
-      <a href="index_ta.html">🇮🇳</a>
+      <a href="./index.html">🇬🇧</a>
+      <a href="./index_pt.html">🇧🇷</a>
+      <a href="./index_ta.html">🇮🇳</a>
       <button id="mute-btn" style="margin-left: 10px;">🔇</button>
     </div>
 
@@ -33,9 +33,9 @@
       <div class="blob" style="bottom: 10%; right: 10%; width: 400px; height: 400px; background: var(--accent);"></div>
 
       <div class="hero-image-container">
-        <img src="assets/luara_1.png" alt="Luara 1" class="luara-avatar active" />
-        <img src="assets/luara_2.png" alt="Luara 2" class="luara-avatar" />
-        <img src="assets/luara_3.png" alt="Luara 3" class="luara-avatar" />
+        <img src="/Luara-five/assets/luara_1-BAUjU2Qs.png" alt="Luara 1" class="luara-avatar active" />
+        <img src="/Luara-five/assets/luara_2-BMI0oFje.png" alt="Luara 2" class="luara-avatar" />
+        <img src="/Luara-five/assets/luara_3-BgHtBheX.png" alt="Luara 3" class="luara-avatar" />
       </div>
       <h1 id="hero-title">லுஆராவுக்கு 5 வயது!</h1>
       <p style="font-size: 1.5rem; margin-bottom: 30px;">ஒரு மாயாஜால சாகசத்திற்கு தயாராகுங்கள்! ✨</p>
@@ -146,7 +146,7 @@
     <section id="party">
       <h2 style="font-size: 3rem; margin-bottom: 50px;">பார்ட்டி நேரம்! 🥳</h2>
       <div class="party-info glass-card">
-        <img src="assets/mairipora_map.png" alt="Mairiporã Map" class="map-illustration" />
+        <img src="/Luara-five/assets/mairipora_map-B0MHv15a.png" alt="Mairiporã Map" class="map-illustration" />
         <div style="text-align: left;">
           <h3>இடம்: மைரிபோரா, SP</h3>
           <p>ஒரு மாயாஜால நாளுக்கு ஒரு அழகான இடம்!</p>
@@ -202,6 +202,14 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script>
+    document.querySelectorAll('#lang-switcher a').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.location.href = link.getAttribute('href');
+      });
+    });
+  </script>
 </body>
 
 </html>
