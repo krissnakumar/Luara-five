@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ta">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="vite.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>லுாஆராவுக்கு 5 வயது! 🎉</title>
+  <meta name="description" content="மைரிபோராவில் லுாராவின் 5வது பிறந்தநாளுக்கான ஒரு மாயாஜால விளையாட்டு மைதானம்!" />
+  <script type="module" crossorigin src="/Luara-five/assets/main-BJZDN3PW.js"></script>
+  <link rel="stylesheet" crossorigin href="/Luara-five/assets/main-CCwi6dWG.css">
+</head>
+
+<body>
+  <div id="app">
+    <!-- Language Switcher -->
+    <div id="lang-switcher" class="glass-card">
+      <a href="index.html">🇬🇧</a>
+      <a href="index_pt.html">🇧🇷</a>
+      <a href="index_ta.html">🇮🇳</a>
+      <button id="mute-btn" style="margin-left: 10px;">🔇</button>
+    </div>
+
+    <!-- Funny Button -->
+    <button id="funny-btn" class="animate-bounce">என்னை கிளிக் செய்யாதே! 🙈</button>
+
+    <!-- Confetti Canvas -->
+    <canvas id="confetti-canvas"></canvas>
+
+    <!-- Hero Section -->
+    <section id="hero">
+      <div class="blob" style="top: 10%; left: 10%; width: 300px; height: 300px; background: var(--primary);"></div>
+      <div class="blob" style="bottom: 10%; right: 10%; width: 400px; height: 400px; background: var(--accent);"></div>
+
+      <div class="hero-image-container">
+        <img src="assets/luara_1.png" alt="Luara 1" class="luara-avatar active" />
+        <img src="assets/luara_2.png" alt="Luara 2" class="luara-avatar" />
+        <img src="assets/luara_3.png" alt="Luara 3" class="luara-avatar" />
+      </div>
+      <h1 id="hero-title">லுஆராவுக்கு 5 வயது!</h1>
+      <p style="font-size: 1.5rem; margin-bottom: 30px;">ஒரு மாயாஜால சாகசத்திற்கு தயாராகுங்கள்! ✨</p>
+      <div style="display: flex; gap: 20px;">
+        <a href="#about" class="btn-primary" id="start-btn">விளையாட்டைத் தொடங்கு 🎉</a>
+        <button class="btn-primary" id="say-hb-btn" style="background: var(--yellow); color: black;">பிறந்தநாள்
+          வாழ்த்துக்கள் சொல்லுங்கள்! 🎂</button>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+      <h2 style="font-size: 3rem; margin-bottom: 50px;">லுஆராவைப் பற்றி 💖</h2>
+      <div class="card-container">
+        <div class="fact-card">
+          <div class="fact-card-inner">
+            <div class="fact-card-front">
+              <span style="font-size: 4rem;">🎨</span>
+              <h3>பிடித்த நிறம்</h3>
+            </div>
+            <div class="fact-card-back">
+              <h3>இளஞ்சிவப்பு மற்றும் ஊதா!</h3>
+              <p>லுாரா மின்னும் மற்றும் வண்ணமயமான அனைத்தையும் விரும்புகிறாள்.</p>
+            </div>
+          </div>
+        </div>
+        <div class="fact-card">
+          <div class="fact-card-inner">
+            <div class="fact-card-front">
+              <span style="font-size: 4rem;">🍕</span>
+              <h3>பிடித்த உணவு</h3>
+            </div>
+            <div class="fact-card-back">
+              <h3>பீட்சா மற்றும் ஐஸ்கிரீம்!</h3>
+              <p>குறிப்பாக நிறைய மிட்டாய்களுடன்.</p>
+            </div>
+          </div>
+        </div>
+        <div class="fact-card">
+          <div class="fact-card-inner">
+            <div class="fact-card-front">
+              <span style="font-size: 4rem;">🦄</span>
+              <h3>பிடித்த கார்ட்டூன்</h3>
+            </div>
+            <div class="fact-card-back">
+              <h3>ப்ளூயி மற்றும் மை லிட்டில் போனி!</h3>
+              <p>அவள் அவர்களுடன் சாகசங்களுக்குச் செல்ல விரும்புகிறாள்.</p>
+            </div>
+          </div>
+        </div>
+        <div class="fact-card">
+          <div class="fact-card-inner">
+            <div class="fact-card-front">
+              <span style="font-size: 4rem;">💃</span>
+              <h3>பொழுதுபோக்குகள்</h3>
+            </div>
+            <div class="fact-card-back">
+              <h3>நடனம் மற்றும் வரைதல்!</h3>
+              <p>லுாரா ஒரு வளரும் குட்டி கலைஞர்.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Games Section -->
+    <section id="games">
+      <h2 style="font-size: 3rem; margin-bottom: 50px;">சிறு விளையாட்டுகள் 🎮</h2>
+      <div class="game-grid">
+        <div class="game-card glass-card" id="game-pop">
+          <span style="font-size: 4rem;">🎈</span>
+          <h3>பலூன்களை உடைக்கவும்</h3>
+          <p>உங்களால் எத்தனை உடைக்க முடியும்?</p>
+        </div>
+        <div class="game-card glass-card" id="game-memory">
+          <span style="font-size: 4rem;">🧠</span>
+          <h3>நினைவக விளையாட்டு</h3>
+          <p>ஜோடிகக் கண்டுபிடி!</p>
+        </div>
+        <div class="game-card glass-card" id="game-cake">
+          <span style="font-size: 4rem;">🎂</span>
+          <h3>கேக்கை அலங்கரிக்கவும்</h3>
+          <p>அதை சுவையாக மாற்றுங்கள்!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+      <h2 style="font-size: 3rem; margin-bottom: 50px;">புகைப்படத் தொகுப்பு 📸</h2>
+      <div class="gallery-container" id="photo-gallery">
+        <!-- Polaroids will be added here via JS -->
+      </div>
+    </section>
+
+    <!-- Countdown Section -->
+    <section id="countdown">
+      <h2 style="font-size: 3rem; margin-bottom: 50px;">நேரக் கணக்கீடு... ⏳</h2>
+      <div class="countdown-container">
+        <div class="countdown-item"><span class="countdown-number" id="days">00</span><span>நாட்கள்</span></div>
+        <div class="countdown-item"><span class="countdown-number" id="hours">00</span><span>மணிநேரம்</span></div>
+        <div class="countdown-item"><span class="countdown-number" id="minutes">00</span><span>நிமிடங்கள்</span></div>
+        <div class="countdown-item"><span class="countdown-number" id="seconds">00</span><span>நொடிகள்</span></div>
+      </div>
+    </section>
+
+    <!-- Party Details -->
+    <section id="party">
+      <h2 style="font-size: 3rem; margin-bottom: 50px;">பார்ட்டி நேரம்! 🥳</h2>
+      <div class="party-info glass-card">
+        <img src="assets/mairipora_map.png" alt="Mairiporã Map" class="map-illustration" />
+        <div style="text-align: left;">
+          <h3>இடம்: மைரிபோரா, SP</h3>
+          <p>ஒரு மாயாஜால நாளுக்கு ஒரு அழகான இடம்!</p>
+          <h3 style="margin-top: 20px;">நேரம்: ஏப்ரல் 24, மதியம் 2:00</h3>
+          <h3 style="margin-top: 20px;">கருப்பொருள்: வானவில் மற்றும் யூனிகார்ன்கள்</h3>
+          <button class="btn-primary" style="margin-top: 30px;" id="rsvp-btn">நான் வருகிறேன்! 🙋‍♀️</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Surprise Section -->
+    <section id="surprise">
+      <div class="glass-card animate-wave" style="padding: 100px; cursor: pointer;" id="surprise-box">
+        <h2 style="font-size: 4rem;">ஆச்சரியத்தைப் பார்க்க கிளிக் செய்யவும்! 🎁</h2>
+      </div>
+    </section>
+
+    <!-- Message Wall Section -->
+    <section id="messages">
+      <h2 style="font-size: 3rem; margin-bottom: 50px;">லுஆராவுக்கான செய்திகள் 💌</h2>
+      <div class="glass-card" style="width: 100%; max-width: 800px; padding: 40px;">
+        <form id="message-form" style="display: flex; flex-direction: column; gap: 15px;">
+          <input type="text" id="msg-name" placeholder="உங்கள் பெயர்" required
+            style="padding: 15px; border-radius: 15px; border: 1px solid #ddd;" />
+          <textarea id="msg-content" placeholder="இனிமையான செய்தியை எழுதுங்கள்..." required
+            style="padding: 15px; border-radius: 15px; border: 1px solid #ddd; min-height: 100px;"></textarea>
+          <div class="file-upload-container">
+            <label for="msg-photo" class="btn-small" style="display: inline-block;">📸 புகைப்படத்தைச் சேர்க்கவும்</label>
+            <input type="file" id="msg-photo" accept="image/*" style="display: none;" />
+            <span id="file-name" style="margin-left: 10px; font-size: 0.9rem;"></span>
+          </div>
+          <button type="submit" class="btn-primary">செய்தியை அனுப்பு 💖</button>
+        </form>
+        <div id="message-list" style="margin-top: 40px; display: flex; flex-direction: column; gap: 20px;">
+          <!-- Messages will appear here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="padding: 40px; text-align: center; background: white;">
+      <p>லுாஆராவுக்காக அன்புடன் உருவாக்கப்பட்டது 💖</p>
+      <div id="stars-container" style="margin-top: 10px;">✨ ⭐ ✨ ⭐ ✨</div>
+    </footer>
+  </div>
+
+  <!-- Modals for Games -->
+  <div class="modal" id="game-modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <div id="game-container"></div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</body>
+
+</html>
