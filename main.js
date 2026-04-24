@@ -161,12 +161,12 @@ setInterval(updateCountdown, 1000);
 const gallery = document.getElementById('photo-gallery');
 if (gallery) {
   const photos = [
-    '/assets/luara_umbrella.png',
-    '/assets/luara_grass.png',
-    '/assets/luara_road.png',
-    '/assets/luara_christmas.png',
-    '/assets/luara_flower.png',
-    '/assets/luara_avatar.png'
+    'assets/luara_umbrella.png',
+    'assets/luara_grass.png',
+    'assets/luara_road.png',
+    'assets/luara_christmas.png',
+    'assets/luara_flower.png',
+    'assets/luara_avatar.png'
   ];
 
   photos.forEach((src, index) => {
@@ -549,7 +549,7 @@ function startCakeGame() {
   gameContainer.innerHTML = `
     <h2 style="margin-bottom: 20px;">${cakeTitle}</h2>
     <div id="cake-area" style="position: relative; width: 300px; height: 300px; margin: 0 auto;">
-      <img src="/assets/birthday_cake.png" style="width: 100%;" />
+      <img src="assets/birthday_cake.png" style="width: 100%;" />
       <div id="decorations" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></div>
     </div>
     <div style="margin-top: 20px; display: flex; gap: 10px; justify-content: center;">
