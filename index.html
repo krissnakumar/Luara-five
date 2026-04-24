@@ -7,17 +7,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Luara is Turning 5! 🎉</title>
   <meta name="description" content="A magical birthday playground for Luara's 5th birthday in Mairiporã!" />
-  <script type="module" crossorigin src="/Luara-five/assets/main-BJZDN3PW.js"></script>
-  <link rel="stylesheet" crossorigin href="/Luara-five/assets/main-CCwi6dWG.css">
+  <link rel="stylesheet" href="./style.css" />
 </head>
 
 <body>
   <div id="app">
     <!-- Language Switcher -->
     <div id="lang-switcher" class="glass-card">
-      <a href="index.html">🇬🇧</a>
-      <a href="index_pt.html">🇧🇷</a>
-      <a href="index_ta.html">🇮🇳</a>
+      <a href="./index.html">🇬🇧</a>
+      <a href="./index_pt.html">🇧🇷</a>
+      <a href="./index_ta.html">🇮🇳</a>
       <button id="mute-btn" style="margin-left: 10px;">🔇</button>
     </div>
 
@@ -201,7 +200,16 @@
     </div>
   </div>
 
+  <script type="module" src="./main.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script>
+    document.querySelectorAll('#lang-switcher a').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.location.href = link.getAttribute('href');
+      });
+    });
+  </script>
 </body>
 
 </html>
