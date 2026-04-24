@@ -485,8 +485,8 @@ function startMemoryGame() {
   const grid = document.getElementById('memory-grid');
   cards.forEach((symbol, i) => {
     const card = document.createElement('div');
-    card.style.width = '70px';
-    card.style.height = '70px';
+    card.style.width = '100%';
+    card.style.aspectRatio = '1/1';
     card.style.background = 'var(--primary)';
     card.style.borderRadius = '10px';
     card.style.display = 'flex';
@@ -548,7 +548,7 @@ function startCakeGame() {
 
   gameContainer.innerHTML = `
     <h2 style="margin-bottom: 20px;">${cakeTitle}</h2>
-    <div id="cake-area" style="position: relative; width: 300px; height: 300px; margin: 0 auto;">
+    <div id="cake-area" style="position: relative; width: 250px; height: 250px; margin: 0 auto;">
       <img src="assets/birthday_cake.png" style="width: 100%;" />
       <div id="decorations" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></div>
     </div>
