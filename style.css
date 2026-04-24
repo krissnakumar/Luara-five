@@ -414,43 +414,129 @@ section {
   max-width: 1000px;
 }
 
-@media (max-width: 768px) {
-  h1 { font-size: 2.5rem !important; }
-  h2 { font-size: 2rem !important; }
-  section { padding: 60px 15px; }
-  
-  #lang-switcher { 
-    top: 10px; 
-    right: 10px; 
-    padding: 5px; 
-    scale: 0.9;
-  }
-  
-  #funny-btn {
-    bottom: 10px;
-    right: 10px;
-    padding: 10px 20px;
-    font-size: 0.9rem;
-    box-shadow: 5px 5px 0 #000;
+/* ===== MOBILE RESPONSIVE FIX ===== */
+
+body {
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Hero text scaling */
+#hero-title {
+  font-size: clamp(2rem, 6vw, 4rem);
+  text-align: center;
+}
+
+#hero p {
+  font-size: clamp(1rem, 3.5vw, 1.5rem);
+  text-align: center;
+  padding: 0 10px;
+}
+
+/* Buttons stack on mobile */
+#hero div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn-primary {
+  width: auto;
+  padding: 12px 18px;
+  font-size: 0.95rem;
+}
+
+/* Avatar size */
+.hero-image-container img {
+  width: 180px;
+  height: 180px;
+}
+
+/* Language switcher (top-right fix) */
+#lang-switcher {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  transform: scale(0.9);
+}
+
+/* Funny button mobile */
+#funny-btn {
+  bottom: 20px;
+  right: 15px;
+  font-size: 0.8rem;
+  padding: 10px 14px;
+}
+
+/* Cards responsive */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 15px;
+  padding: 0 10px;
+}
+
+/* Games grid */
+.game-grid {
+  grid-template-columns: 1fr;
+  padding: 0 10px;
+}
+
+/* Gallery */
+.gallery-container {
+  padding: 0 10px;
+}
+
+/* Countdown */
+.countdown-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.countdown-item {
+  min-width: 70px;
+}
+
+/* Party section */
+.party-info {
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+}
+
+.map-illustration {
+  width: 100%;
+  max-width: 250px;
+  margin-bottom: 20px;
+}
+
+/* Message form */
+#messages form input,
+#messages form textarea {
+  width: 100%;
+}
+
+/* ===== EXTRA SMALL DEVICES ===== */
+@media (max-width: 480px) {
+  #hero-title {
+    font-size: 1.8rem;
   }
 
-  .hero-image-container { width: 250px; height: 250px; }
-  .fact-card { width: 100%; max-width: 300px; }
-  .game-grid { grid-template-columns: 1fr; }
-  .countdown-container { gap: 10px; }
-  .countdown-item { padding: 10px; min-width: 70px; }
-  .countdown-number { font-size: 2rem; }
-  .party-info { flex-direction: column; text-align: center; gap: 30px; }
-  .party-info div { text-align: center !important; }
-  
-  .modal-content {
-    padding: 20px;
-    width: 95%;
+  .hero-image-container img {
+    width: 140px;
+    height: 140px;
   }
 
-  /* Ensure message wall fits */
-  #message-form { padding: 0; }
-  .message-card { width: 100%; }
+  .btn-primary {
+    width: 100%;
+  }
 }
 
 .map-illustration {
