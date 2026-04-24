@@ -84,7 +84,7 @@ app.post('/api/messages/:id/like', (req, res) => {
 });
 
 // Catch-all to serve index.html for any other requests
-app.get('*', (req, res) => {
+app.get('/*', (req, res) => {
   res.sendFile(path.join(distPath, 'index.html'));
 });
 
