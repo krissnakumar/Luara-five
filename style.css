@@ -189,10 +189,11 @@ section {
 
 .hero-image-container {
   position: relative;
-  width: 300px;
-  height: 300px;
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  aspect-ratio: 1/1;
   margin: 0 auto 30px;
-  max-width: 80%;
 }
 
 .luara-avatar {
@@ -335,14 +336,16 @@ section {
 
 /* Games Section */
 #games .game-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 .game-card {
-  width: 300px;
+  width: 100%;
   cursor: pointer;
   transition: transform 0.3s;
 }
@@ -356,8 +359,8 @@ section {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
-  padding: 40px;
+  gap: 15px;
+  padding: 10px;
 }
 
 .polaroid {
@@ -408,9 +411,10 @@ section {
 /* Party Details */
 .party-info {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  gap: 50px;
+  gap: 20px;
+  text-align: center;
   max-width: 1000px;
 }
 
@@ -592,4 +596,23 @@ body {
   font-size: 2rem;
   cursor: pointer;
   color: var(--primary);
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 50px 15px;
+  }
+
+  .blob {
+    display: none;
+  }
+
+  #lang-switcher {
+    transform: scale(0.8);
+  }
+
+  .countdown-item {
+    min-width: 60px;
+    padding: 10px;
+  }
 }
