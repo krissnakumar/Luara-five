@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luara está fazendo 5 anos! 🎉</title>
+  <meta name="description" content="Um playground mágico de aniversário para os 5 anos da Luara em Mairiporã!" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <div id="app">
+    <!-- Language Switcher -->
+    <div id="lang-switcher" class="glass-card">
+      <a href="index.html">🇬🇧</a>
+      <a href="index_pt.html">🇧🇷</a>
+      <a href="index_ta.html">🇮🇳</a>
+      <button id="mute-btn" style="margin-left: 10px;">🔇</button>
+    </div>
+
+    <!-- Funny Button -->
+    <button id="funny-btn" class="animate-bounce">NÃO ME CLIQUE! 🙈</button>
+
+    <!-- Confetti Canvas -->
+    <canvas id="confetti-canvas"></canvas>
+
+    <!-- Hero Section -->
+    <section id="hero">
+      <div class="blob" style="top: 10%; left: 10%; width: 300px; height: 300px; background: var(--primary);"></div>
+      <div class="blob" style="bottom: 10%; right: 10%; width: 400px; height: 400px; background: var(--accent);"></div>
+
+      <div class="hero-image-container">
+        <img src="/assets/luara_1.png" alt="Luara 1" class="luara-avatar active" />
+        <img src="/assets/luara_2.png" alt="Luara 2" class="luara-avatar" />
+        <img src="/assets/luara_3.png" alt="Luara 3" class="luara-avatar" />
+      </div>
+      <h1 id="hero-title">Luara está fazendo 5 anos!</h1>
+      <p style="font-size: 1.5rem; margin-bottom: 30px;">Prepare-se para uma aventura mágica! ✨</p>
+      <div style="display: flex; gap: 20px;">
+        <a href="#about" class="btn-primary" id="start-btn">Começar a Diversão 🎉</a>
+        <button class="btn-primary" id="say-hb-btn" style="background: var(--yellow); color: black;">Dizer Feliz
+          Aniversário! 🎂</button>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+      <h2 style="font-size: 3rem; margin-bottom: 50px;">Tudo sobre a Luara 💖</h2>
+      <div class="card-container">
+        <div class="fact-card">
+          <div class="fact-card-inner">
+            <div class="fact-card-front">
+              <span style="font-size: 4rem;">🎨</span>
+              <h3>Cor Favorita</h3>
+            </div>
+            <div class="fact-card-back">
+              <h3>Rosa e Roxo!</h3>
+              <p>Luara ama tudo que brilha e é colorido.</p>
+            </div>
+          </div>
+        </div>
+        <div class="fact-card">
+          <div class="fact-card-inner">
+            <div class="fact-card-front">
+              <span style="font-size: 4rem;">🍕</span>
+              <h3>Comida Favorita</h3>
+            </div>
+            <div class="fact-card-back">
+              <h3>Pizza e Sorvete!</h3>
+              <p>Especialmente com muitos granulados.</p>
+            </div>
+          </div>
+        </div>
+        <div class="fact-card">
+          <div class="fact-card-inner">
+            <div class="fact-card-front">
+              <span style="font-size: 4rem;">🦄</span>
+              <h3>Desenho Favorito</h3>
+            </div>
+            <div class="fact-card-back">
+              <h3>Bluey e My Little Pony!</h3>
+              <p>Ela ama ir em aventuras com eles.</p>
+            </div>
+          </div>
+        </div>
+        <div class="fact-card">
+          <div class="fact-card-inner">
+            <div class="fact-card-front">
+              <span style="font-size: 4rem;">💃</span>
+              <h3>Hobbies</h3>
+            </div>
+            <div class="fact-card-back">
+              <h3>Dançar e Desenhar!</h3>
+              <p>Luara é uma pequena artista em formação.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Games Section -->
+    <section id="games">
+      <h2 style="font-size: 3rem; margin-bottom: 50px;">Mini Jogos 🎮</h2>
+      <div class="game-grid">
+        <div class="game-card glass-card" id="game-pop">
+          <span style="font-size: 4rem;">🎈</span>
+          <h3>Estoure os Balões</h3>
+          <p>Quantos você consegue estourar?</p>
+        </div>
+        <div class="game-card glass-card" id="game-memory">
+          <span style="font-size: 4rem;">🧠</span>
+          <h3>Jogo da Memória</h3>
+          <p>Encontre os pares!</p>
+        </div>
+        <div class="game-card glass-card" id="game-cake">
+          <span style="font-size: 4rem;">🎂</span>
+          <h3>Decore o Bolo</h3>
+          <p>Deixe-o delicioso!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+      <h2 style="font-size: 3rem; margin-bottom: 50px;">Galeria de Fotos 📸</h2>
+      <div class="gallery-container" id="photo-gallery">
+        <!-- Polaroids will be added here via JS -->
+      </div>
+    </section>
+
+    <!-- Countdown Section -->
+    <section id="countdown">
+      <h2 style="font-size: 3rem; margin-bottom: 50px;">Contagem Regressiva... ⏳</h2>
+      <div class="countdown-container">
+        <div class="countdown-item"><span class="countdown-number" id="days">00</span><span>Dias</span></div>
+        <div class="countdown-item"><span class="countdown-number" id="hours">00</span><span>Horas</span></div>
+        <div class="countdown-item"><span class="countdown-number" id="minutes">00</span><span>Minutos</span></div>
+        <div class="countdown-item"><span class="countdown-number" id="seconds">00</span><span>Segundos</span></div>
+      </div>
+    </section>
+
+    <!-- Party Details -->
+    <section id="party">
+      <h2 style="font-size: 3rem; margin-bottom: 50px;">Hora da Festa! 🥳</h2>
+      <div class="party-info glass-card">
+        <img src="/assets/mairipora_map.png" alt="Mairiporã Map" class="map-illustration" />
+        <div style="text-align: left;">
+          <h3>Onde: Mairiporã, SP</h3>
+          <p>Um lugar lindo para um dia mágico!</p>
+          <h3 style="margin-top: 20px;">Quando: 24 de Abril, 14:00</h3>
+          <h3 style="margin-top: 20px;">Tema: Arco-íris e Unicórnios</h3>
+          <button class="btn-primary" style="margin-top: 30px;" id="rsvp-btn">Eu vou! 🙋‍♀️</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Surprise Section -->
+    <section id="surprise">
+      <div class="glass-card animate-wave" style="padding: 100px; cursor: pointer;" id="surprise-box">
+        <h2 style="font-size: 4rem;">Clique para uma Surpresa! 🎁</h2>
+      </div>
+    </section>
+
+    <!-- Message Wall Section -->
+    <section id="messages">
+      <h2 style="font-size: 3rem; margin-bottom: 50px;">Mensagens para Luara 💌</h2>
+      <div class="glass-card" style="width: 100%; max-width: 800px; padding: 40px;">
+        <form id="message-form" style="display: flex; flex-direction: column; gap: 15px;">
+          <input type="text" id="msg-name" placeholder="Seu Nome" required
+            style="padding: 15px; border-radius: 15px; border: 1px solid #ddd;" />
+          <textarea id="msg-content" placeholder="Escreva uma mensagem doce..." required
+            style="padding: 15px; border-radius: 15px; border: 1px solid #ddd; min-height: 100px;"></textarea>
+          <div class="file-upload-container">
+            <label for="msg-photo" class="btn-small" style="display: inline-block;">📸 Adicionar Foto</label>
+            <input type="file" id="msg-photo" accept="image/*" style="display: none;" />
+            <span id="file-name" style="margin-left: 10px; font-size: 0.9rem;"></span>
+          </div>
+          <button type="submit" class="btn-primary">Enviar Mensagem 💖</button>
+        </form>
+        <div id="message-list" style="margin-top: 40px; display: flex; flex-direction: column; gap: 20px;">
+          <!-- Messages will appear here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="padding: 40px; text-align: center; background: white;">
+      <p>Feito com amor para a Luara 💖</p>
+      <div id="stars-container" style="margin-top: 10px;">✨ ⭐ ✨ ⭐ ✨</div>
+    </footer>
+  </div>
+
+  <!-- Modals for Games -->
+  <div class="modal" id="game-modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <div id="game-container"></div>
+    </div>
+  </div>
+
+  <script type="module" src="/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</body>
+
+</html>
