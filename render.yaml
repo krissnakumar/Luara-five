@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: luara-birthday-site
+    env: node
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+    # Note: Free tier does not support persistent disks. 
+    # If using a paid tier, uncomment the lines below:
+    # disk:
+    #   name: messages-data
+    #   mountPath: /opt/render/project/src/public/uploads
+    #   sizeGB: 1
