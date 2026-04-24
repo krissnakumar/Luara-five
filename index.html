@@ -148,32 +148,30 @@
       <h2 style="font-size: 3rem; margin-bottom: 50px;">Party Time! 🥳</h2>
       <div class="party-info glass-card">
         <img src="assets/mairipora_map.png" alt="Mairiporã Map" class="map-illustration" />
-        <div style="text-align: left;">
+        <div class="party-text">
           <h3>Where: Mairiporã, SP</h3>
           <p>A beautiful place for a magical day!</p>
-          <h3 style="margin-top: 20px;">When: April 24th, 2:00 PM</h3>
-          <h3 style="margin-top: 20px;">Theme: Rainbows & Unicorns</h3>
-          <button class="btn-primary" style="margin-top: 30px;" id="rsvp-btn">I'm coming! 🙋‍♀️</button>
+          <h3>When: April 24th, 2:00 PM</h3>
+          <h3>Theme: Rainbows & Unicorns</h3>
+          <button class="btn-primary" id="rsvp-btn">I'm coming! 🙋‍♀️</button>
         </div>
       </div>
     </section>
 
     <!-- Surprise Section -->
     <section id="surprise">
-      <div class="glass-card animate-wave" style="padding: 100px; cursor: pointer;" id="surprise-box">
-        <h2 style="font-size: 4rem;">Click for a Surprise! 🎁</h2>
+      <div class="glass-card animate-wave surprise-card" id="surprise-box">
+        <h2>Click for a Surprise! 🎁</h2>
       </div>
     </section>
 
     <!-- Message Wall Section -->
     <section id="messages">
-      <h2 style="font-size: 3rem; margin-bottom: 50px;">Messages for Luara 💌</h2>
-      <div class="glass-card" style="width: 100%; max-width: 800px; padding: 40px;">
-        <form id="message-form" style="display: flex; flex-direction: column; gap: 15px;">
-          <input type="text" id="msg-name" placeholder="Your Name" required
-            style="padding: 15px; border-radius: 15px; border: 1px solid #ddd;" />
-          <textarea id="msg-content" placeholder="Write a sweet message..." required
-            style="padding: 15px; border-radius: 15px; border: 1px solid #ddd; min-height: 100px;"></textarea>
+      <h2 style="margin-bottom: 30px;">Messages for Luara 💌</h2>
+      <div class="glass-card message-wall-container">
+        <form id="message-form">
+          <input type="text" id="msg-name" placeholder="Your Name" required />
+          <textarea id="msg-content" placeholder="Write a sweet message..." required></textarea>
           <div class="file-upload-container">
             <label for="msg-photo" class="btn-small" style="display: inline-block;">📸 Add a Photo</label>
             <input type="file" id="msg-photo" accept="image/*" style="display: none;" />
