@@ -238,17 +238,6 @@ if (sayHbBtn) {
   };
 }
 
-function createFloatingEmoji() {
-  const emojis = ['💖', '🎂', '🎉', '🎈', '✨', '🌈', '🦄'];
-  const emoji = document.createElement('div');
-  emoji.className = 'floating-emoji';
-  emoji.innerText = emojis[Math.floor(Math.random() * emojis.length)];
-  emoji.style.left = (Math.random() * 60 + 20) + '%';
-  emoji.style.setProperty('--tx', (Math.random() * 200 - 100) + 'px');
-  document.body.appendChild(emoji);
-  setTimeout(() => emoji.remove(), 2000);
-}
-
 // Message Wall Logic
 const messageForm = document.getElementById('message-form');
 const messageList = document.getElementById('message-list');
